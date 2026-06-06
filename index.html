@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Book pooja services with Kilambhi Narasimha Charyulu. Home visit, temple, online, homam, samskara, festival, astrology and remedial pooja services."
+    />
+    <title>Aathreyasa Krupa Pooja Services</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#booking" aria-label="Aathreyasa Krupa Pooja Services home">
+        <span class="brand-mark" aria-hidden="true">ॐ</span>
+        <span>
+          <strong>Aathreyasa Krupa</strong>
+          <small>Pooja Services</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#booking" data-i18n="navBook">Book</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#priest-desk" data-i18n="navDesk">Priest Desk</a>
+      </nav>
+      <label class="language-control" for="language-select">
+        <span data-i18n="languageLabel">Language</span>
+        <select id="language-select" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="te">తెలుగు</option>
+          <option value="ta">தமிழ்</option>
+          <option value="kn">ಕನ್ನಡ</option>
+        </select>
+      </label>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <img src="./assets/pooja-hero.png" alt="Traditional pooja setup with lamps and flowers" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="priestName">Kilambhi Narasimha Charyulu</p>
+          <h1 id="page-title">Aathreyasa Krupa Pooja Services</h1>
+          <p data-i18n="heroCopy">
+            Book daily poojas, homams, samskaras, festival rituals, consultations and online
+            services with payment after acceptance.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#booking" data-i18n="bookNow">Book a Slot</a>
+            <a class="button ghost" href="https://jsdl.in/DT-28J4GAEEYYW" target="_blank" rel="noreferrer" data-i18n="viewLocation">
+              View Location
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="booking-shell" aria-labelledby="booking-title">
+        <div class="booking-intro">
+          <p class="eyebrow" data-i18n="availability">All days, 9 AM to 6 PM</p>
+          <h2 id="booking-title" data-i18n="bookingTitle">Book a pooja slot</h2>
+          <p data-i18n="bookingCopy">
+            Hyderabad bookings need at least 2 days notice. Outside Hyderabad bookings need at
+            least 1 week notice.
+          </p>
+          <dl class="facts">
+            <div>
+              <dt data-i18n="paymentLabel">Payment</dt>
+              <dd data-i18n="paymentValue">After priest acceptance</dd>
+            </div>
+            <div>
+              <dt data-i18n="priceLabel">Price</dt>
+              <dd data-i18n="priceValue">On call</dd>
+            </div>
+            <div>
+              <dt data-i18n="modeLabel">Mode</dt>
+              <dd data-i18n="modeValue">Home, temple and online</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form id="booking-form" class="booking-form" autocomplete="on">
+          <div class="form-row two">
+            <label>
+              <span data-i18n="nameLabel">Name</span>
+              <input id="customer-name" name="name" type="text" required />
+            </label>
+            <label>
+              <span data-i18n="whatsappLabel">WhatsApp number</span>
+              <input id="customer-whatsapp" name="whatsapp" type="tel" inputmode="tel" required />
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label>
+              <span data-i18n="categoryLabel">Pooja category</span>
+              <select id="category-select" name="category" required></select>
+            </label>
+            <label>
+              <span data-i18n="serviceLabel">Pooja type</span>
+              <select id="service-select" name="service" required></select>
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label>
+              <span data-i18n="visitAreaLabel">Service area</span>
+              <select id="visit-area" name="visitArea" required>
+                <option value="hyderabad" data-i18n="withinHyderabad">Within Hyderabad</option>
+                <option value="outside" data-i18n="outsideHyderabad">Outside Hyderabad</option>
+                <option value="online" data-i18n="onlineVirtual">Online / Virtual</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="modeSelectLabel">Service mode</span>
+              <select id="service-mode" name="serviceMode" required>
+                <option value="home" data-i18n="homeVisit">Home visit</option>
+                <option value="temple" data-i18n="templeVisit">Temple service</option>
+                <option value="online" data-i18n="onlineService">Online service</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="date-panel">
+            <div class="date-header">
+              <button class="icon-button" type="button" id="prev-month" aria-label="Previous month">‹</button>
+              <strong id="calendar-title"></strong>
+              <button class="icon-button" type="button" id="next-month" aria-label="Next month">›</button>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Choose booking date"></div>
+            <input id="booking-date" name="date" type="hidden" required />
+          </div>
+
+          <fieldset class="slot-panel">
+            <legend data-i18n="slotLabel">Time slot</legend>
+            <div id="slot-grid" class="slot-grid"></div>
+          </fieldset>
+
+          <label>
+            <span data-i18n="addressLabel">Address</span>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </label>
+
+          <label>
+            <span data-i18n="notesLabel">Notes / Gothram / Star</span>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+          </label>
+
+          <button class="button primary full" type="submit" data-i18n="submitBooking">Submit Booking</button>
+        </form>
+      </section>
+
+      <section id="status-panel" class="status-panel" hidden aria-live="polite"></section>
+
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="servicesEyebrow">Services</p>
+          <h2 id="services-title" data-i18n="servicesTitle">Poojas, homams and consultations</h2>
+        </div>
+        <div class="service-tools">
+          <label>
+            <span data-i18n="searchLabel">Search services</span>
+            <input id="service-search" type="search" placeholder="Ganapathi, Homam, Muhurtham..." />
+          </label>
+        </div>
+        <div id="services-list" class="services-list"></div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 id="contact-title" data-i18n="contactTitle">Aathreyasa Krupa Pooja Services</h2>
+          <p class="contact-name">Kilambhi Narasimha Charyulu</p>
+          <address>
+            Gandhi Nagar, Vanasthalipuram<br />
+            Hyderabad
+          </address>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://wa.me/919502668772" target="_blank" rel="noreferrer" data-i18n="whatsappAction">
+            WhatsApp
+          </a>
+          <a class="button secondary" href="mailto:knarasimhacharyyulu@gmail.com">Email</a>
+          <a class="button secondary" href="https://jsdl.in/DT-28J4GAEEYYW" target="_blank" rel="noreferrer" data-i18n="mapAction">
+            Map
+          </a>
+        </div>
+      </section>
+
+      <section id="priest-desk" class="section priest-desk" aria-labelledby="desk-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="deskEyebrow">Priest Desk</p>
+          <h2 id="desk-title" data-i18n="deskTitle">Review bookings</h2>
+        </div>
+        <div class="desk-grid">
+          <form id="block-date-form" class="tool-panel">
+            <h3 data-i18n="blockedTitle">Blocked days</h3>
+            <label>
+              <span data-i18n="blockDateLabel">Block a date</span>
+              <input id="block-date-input" type="date" />
+            </label>
+            <button class="button secondary full" type="submit" data-i18n="blockDateButton">Block Date</button>
+            <div id="blocked-list" class="blocked-list"></div>
+          </form>
+          <div class="tool-panel">
+            <h3 data-i18n="bookingListTitle">Booking requests</h3>
+            <div id="booking-list" class="booking-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="booking-card-template">
+      <article class="booking-card">
+        <div class="booking-card-head">
+          <strong class="booking-person"></strong>
+          <span class="status-pill"></span>
+        </div>
+        <p class="booking-meta"></p>
+        <p class="booking-address"></p>
+        <div class="booking-actions"></div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
